@@ -2,12 +2,15 @@
 const express = require("express");
 const app = express();
 const foodRouter = require('./routes/food');
-const notFoundHandler = require('./error-handlers/404')
-const errorHandler = require ('./error-handlers/505')
+const notFoundHandler = require('./error-handlers/404');
+const errorHandler = require ('./error-handlers/505');
+const cookersRouter = require('./routes/cooker');
 
 app.use(express.json());
 
 app.use(foodRouter);
+app.use(cookersRouter);
+
 
 app.get('/', welcomeHandler);
 function welcomeHandler(req, res) {

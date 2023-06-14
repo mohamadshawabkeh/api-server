@@ -7,7 +7,11 @@ const Food = (sequelize, DataTypes) =>
         },
         foodRecipe: {
             type: DataTypes.STRING,
-        }
+        },
+        cookerId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
     })
 
 
