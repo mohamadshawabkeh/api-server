@@ -10,15 +10,19 @@ the function as you can see is
 ├── __tests__
 │   ├── server.test.js (integration test)
 ├── src
+├── ├──lib
+│   │   ├── collection.js
 │   ├── error-handlers
 │   │   ├── 404.js
 │   │   ├── 500.js
 │   ├── models
 │   │   ├── index.js
-│   │   ├── food.js
-│   │   ├── clothes.js
+│   │   ├── food.model.js
+│   │   ├── clothes.model.js
+│   │   ├──cooker.model.js
 │   ├── routes
 │   │   ├── food.js
+│   │   ├── cooker.js
 │   │   └── clothes.js
 │   └── server.js
 ├── .eslintrc.json
@@ -63,10 +67,25 @@ the function as you can see is
     2. REST Method: DELETE
     3. CRUD Operation: destroy
 
+### Cooker with foods 
+**this path shows the cooker ID with the Food resigned in the same cooker ID**
+
+    1. Path: /cookersfood/1
+    2. REST Method: readCookersFood
+    3. CRUD Operation: Read
+
+
 ## Testing
     The test has been applied in __test__ file and all tests have been passed 
+    ✓ return Home (43 ms)
+    ✓ return 404 in an invalid routes (11 ms)
+    ✓ return 404 in an invalid method (11 ms)
+    ✓ can add a food (39 ms)
+    ✓ can read all food (41 ms)
+    ✓ can update food (20 ms)
+    ✓ can delete food (14 ms)
 
-
+[tests](./testslab4.jpg)
 
 
 
